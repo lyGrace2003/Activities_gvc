@@ -180,22 +180,25 @@ def display_menu():
     print("6. Exit")
 
 def main():
-    display_menu()
-    choice = input("Enter your choice: ")
-    if choice == '1':
-        activity_one()
-    elif choice == '2':
-        activity_two()
-    elif choice == '3':
-        activity_three()
-    elif choice == '4':
-        activity_four()
-    elif choice == '5':
-        activity_five()
-    elif choice == '6':
-        print("Exiting...")
-    else:
-        print("Invalid choice. Please enter a number between 1 and 6.")
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+        
+        if choice == '1':
+            activity_one()
+        elif choice == '2':
+            activity_two()
+        elif choice == '3':
+            activity_three()
+        elif choice == '4':
+            activity_four()
+        elif choice == '5':
+            activity_five()
+        elif choice == '6':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 6.")
 
 if __name__ == "__main__":
     main()
